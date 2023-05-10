@@ -110,12 +110,10 @@ impl Display for Todos {
 
 #[cfg(test)]
 mod tests {
-    use crate::todos::Todos;
-
     use super::*;
 
     #[test]
-    fn test_display() {
+    fn display() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -124,7 +122,7 @@ mod tests {
     }
 
     #[test]
-    fn test_add_todo() {
+    fn add_todo() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -137,7 +135,7 @@ mod tests {
     }
 
     #[test]
-    fn test_complete_by_name() {
+    fn complete_by_name() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -149,7 +147,7 @@ mod tests {
     }
 
     #[test]
-    fn test_complete_by_index() {
+    fn complete_by_index() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -161,7 +159,7 @@ mod tests {
     }
 
     #[test]
-    fn test_uncompleted_by_name() {
+    fn uncompleted_by_name() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -174,7 +172,7 @@ mod tests {
     }
 
     #[test]
-    fn test_uncompleted_by_index() {
+    fn uncompleted_by_index() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -187,7 +185,7 @@ mod tests {
     }
 
     #[test]
-    fn test_delete_by_name() {
+    fn delete_by_name() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");
@@ -199,7 +197,7 @@ mod tests {
     }
 
     #[test]
-    fn test_delete_by_index() {
+    fn delete_by_index() {
         let mut todos = Todos::new();
         todos.add_todo("Learn Rust");
         todos.add_todo("Profit!");

@@ -32,3 +32,26 @@ impl Todo {
         self.name.contains(name)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn toggle_complete() {
+        let mut todo = Todo::new("Buy Milk");
+
+        todo.toggle_complete();
+
+        assert!(todo.completed);
+    }
+
+    #[test]
+    fn match_on_name() {
+        let todo = Todo::new("Buy Milk");
+        let todo2 = Todo::new("Buy Water");
+
+        assert!(todo.match_on_name("Milk"));
+        assert!(!todo2.match_on_name("Milk"));
+    }
+}
